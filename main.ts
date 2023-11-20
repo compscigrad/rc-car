@@ -11,6 +11,7 @@ radio.onReceivedValueDeprecated(function (name, value) {
                 `)
             Kitronik_Robotics_Board.motorOn(Kitronik_Robotics_Board.Motors.Motor1, Kitronik_Robotics_Board.MotorDirection.Reverse, 50)
             Kitronik_Robotics_Board.motorOn(Kitronik_Robotics_Board.Motors.Motor2, Kitronik_Robotics_Board.MotorDirection.Reverse, 50)
+            music.play(music.stringPlayable("G B A G C5 B A B ", 120), music.PlaybackMode.UntilDone)
         } else if (value < 0) {
             basic.showLeds(`
                 . . # . .
@@ -92,5 +93,8 @@ input.onButtonPressed(Button.A, function () {
             . . . . .
             `)
     }
+})
+radio.onReceivedString(function (receivedString) {
+	
 })
 radio.setGroup(8)
