@@ -9,10 +9,11 @@ radio.onReceivedValueDeprecated(function (name, value) {
                 . . # . .
                 . . # . .
                 `)
+            music.play(music.stringPlayable("G B A G C5 B A B ", 120), music.PlaybackMode.InBackground)
             Kitronik_Robotics_Board.motorOn(Kitronik_Robotics_Board.Motors.Motor1, Kitronik_Robotics_Board.MotorDirection.Reverse, 50)
             Kitronik_Robotics_Board.motorOn(Kitronik_Robotics_Board.Motors.Motor2, Kitronik_Robotics_Board.MotorDirection.Reverse, 50)
-            music.play(music.stringPlayable("G B A G C5 B A B ", 120), music.PlaybackMode.UntilDone)
         } else if (value < 0) {
+            music.play(music.stringPlayable("G - G - G - G - ", 120), music.PlaybackMode.InBackground)
             basic.showLeds(`
                 . . # . .
                 . . # . .
